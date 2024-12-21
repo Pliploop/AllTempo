@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in *.mp3; do
+	j=`echo "${i%mp3}wav"` 
+	sox $i -r 44100 -c 1 $j
+	echo processing $i $j
+done
